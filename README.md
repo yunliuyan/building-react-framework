@@ -7,7 +7,7 @@
 
 cnpm install
 
-cnpm mock
+cnpm run mock
 
 cnpm start
 
