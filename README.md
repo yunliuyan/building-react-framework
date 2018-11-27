@@ -11,6 +11,8 @@ cnpm run mock
 
 cnpm start
 
+都运行成功用浏览器访问路径：http://localhost:8000
+
 生产环境如何使用：
 
 cnpm run build
