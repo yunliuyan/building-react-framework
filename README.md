@@ -21,5 +21,10 @@ cnpm run build
 
 
 第二次上传新增:
+
 1:将api接口封装至config文件夹中的api.js中
+
+
 2: 将http请求函数封装至config文件夹中的http.js中
+
+
