@@ -1,7 +1,7 @@
 # building-react-framework
 借鉴网上资料，自己搭建了一个react+redux框架
 
-设计知识点: webpack+es6+react+redux+react-router;
+设计知识点: webpack+es6+react+redux+react-router+axios;
 
 开发环境如何使用(请安装淘宝镜像): 
 
