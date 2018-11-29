@@ -1,5 +1,6 @@
 import counter from 'reduxRouter/reducers/counter';
 import userInfo from 'reduxRouter/reducers/userInfo';
+import books from 'reduxRouter/reducers/books';
 
 import { combineReducers } from 'redux';
 // export default function combineReducer(state={},action) {
@@ -10,5 +11,6 @@ import { combineReducers } from 'redux';
 // }
 export default combineReducers({
     counter,
-    userInfo
+    userInfo,
+    books,
 })

@@ -51,7 +51,8 @@ commonConfig = {
             component: path.join(__dirname,'src/components'),
             router: path.join(__dirname,'src/router'),
             reduxRouter: path.join(__dirname, 'src/redux'),
-            mock: path.join(__dirname,'mock')
+            mock: path.join(__dirname,'mock'),
+            config: path.join(__dirname,'config')
         }
     }
 };
