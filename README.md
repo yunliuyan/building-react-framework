@@ -111,7 +111,16 @@ A：碰到这个问题吐了一口老血。想了很多办法，比如在缓存�
     .将登录页提取为一个组件，而没将他作为一个路由的存在，只有当token出错的时候才会调用到它。在加载app.js的时候来判断存放在本地
      的token，逻辑与第三次上传的一致，不过在验证成功之后，后台会返回一个新的token，可替换放在本地的token，
      这样若是用户经常使用则不会需要重新登录了。
+     
+      {this.state.isRouter ? <Login /> : <div style={{position:'absolute',height:'100%',width:'100%'}}>
+                    <Row style={{height:'100%'}}>
+                        <Col style={{ height: '100%'}} span={3}><Nav/></Col>
+                        <Col span={21}><Hello />{getRouter()}</Col>
+                    </Row>
+                </div> }  
       
    2：完善了登录成功后的导航栏，优化了一些代码。
+   
+   3：修改了加载组件，采用了antd中的<Spin />进行加载提示
     
  
