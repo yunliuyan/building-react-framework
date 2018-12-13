@@ -19,8 +19,13 @@ commonConfig = {
     module: {
         rules: [{
             test: /\.js$/,
-            use: ['babel-loader?cacheDirectory=true'],
-            include: path.join(__dirname, 'src')
+            include: path.join(__dirname, 'src'),
+            loader:'babel-loader?cacheDirectory=true',
+            query: {
+                plugins: [
+                    ["import", { libraryName: "antd",  style: "css" }]
+                ]
+            },
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{

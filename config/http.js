@@ -16,6 +16,7 @@ export function requsetByAxios({
             }], 
             headers = {}, 
             params =  {}, 
+            data = {},
             timeout=10000,
         }={}){
           return axios({
@@ -27,7 +28,8 @@ export function requsetByAxios({
                 transformResponse,
                 headers,
                 params,
-                timeout
+                timeout,
+                data
             }).then(res=>{
                 return res.data
             }).catch(res=>{

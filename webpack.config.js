@@ -12,11 +12,23 @@ const publicConfig = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: ExtractTextPlugin.extract({
-                fallback: "style-loader",
-                use: ["css-loader?modules&localIdentName=[local]-[hash:base64:5]", "postcss-loader"]
-            })
-        }]
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader',
+                // options: {
+                //     modules: true,
+                //     importLoaders: 1,
+                //     localIdentName: '[name]_[local]_[hash:base64:5]',
+                //     camelCase: true
+                // }
+            }, {
+                loader: 'postcss-loader',
+                options: {
+                    ident: 'postcss',
+                }
+            }]
+        }],
     },
     plugins: [
         new CleanWebpackPlugin(['dist/*.*']),

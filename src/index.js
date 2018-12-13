@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
+import { CookiesProvider } from 'react-cookie';
 import store from 'reduxRouter/store';
-//import 'mock/mock';
+import 'mock/mock';
 import {BrowserRouter as Router} from 'react-router-dom';
 import App from 'component/App/App';
 
@@ -21,11 +22,13 @@ if(module.hot) {
 function renderWithHotReload(RootElement) {
     ReactDom.render(
         <AppContainer>
-            <Provider store={store}>
-                <Router>
-                    <RootElement/>
-                </Router>
-            </Provider>
+            <CookiesProvider>
+                <Provider store={store}>
+                    <Router>
+                        <RootElement/>
+                    </Router>
+                </Provider>
+            </CookiesProvider>
         </AppContainer>,
         document.getElementById('app')
     )
