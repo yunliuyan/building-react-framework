@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-
+import { Spin } from 'antd';
 export default class Loading extends Component {
     render() {
         return (
-            <div>页面正在加载中....</div>
+            <div> <Spin size="large" tip="Loading..." style={{position:'absolute',width:'100%',height:'100%',margin:'400px auto'}} /></div>
         )
     }
 }

@@ -1,13 +1,13 @@
 import  React, { Component } from "react";
-
 import Nav from 'component/Nav/Nav';
-
+import Hello from 'component/Hello/Hello';
+import Login from 'pages/Login/login';
 import getRouter from 'router/router';
-import getLoginRouter from 'router/loginRouter';
-
 import { CHECK_TOKEN } from 'config/api.js';
 import { requsetByAxios } from 'config/http.js';
 import { Redirect } from 'react-router-dom';
+import { Row, Col } from 'antd';
+
 
 class App extends Component {
     constructor(){
@@ -24,6 +24,8 @@ class App extends Component {
                     this.setState({
                         isRouter:true
                     })
+                }else{
+                    localStorage.setItem('token',res.token);
                 }
             })
         }catch(err){
@@ -40,9 +42,13 @@ class App extends Component {
     render() {
         return (
             <div> 
-                {this.state.isRouter ? <Redirect push to="/login" /> : ''}  
-                <div>{getLoginRouter()}</div>
-                <div><Nav/>{getRouter()}</div> 
+                {this.state.isRouter ? <Login /> : <div style={{position:'absolute',height:'100%',width:'100%'}}>
+                    <Row style={{height:'100%'}}>
+                        <Col style={{ height: '100%'}} span={3}><Nav/></Col>
+                        <Col span={21}><Hello />{getRouter()}</Col>
+                    </Row>
+                </div> }  
+                
             </div>
         )
     }

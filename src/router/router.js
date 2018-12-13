@@ -10,6 +10,7 @@ import Counter from 'bundle-loader?lazy&name=counter!pages/Counter/Counter';
 import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/UserInfo/UserInfo';
 import NotFound from 'bundle-loader?lazy&name=notFound!pages/NotFound/NotFound';
 import Books from 'bundle-loader?lazy&name=books!pages/Books/Books';
+import Login from 'bundle-loader?lazy&name=login!pages/Login/login';
 
 
 //按需加载

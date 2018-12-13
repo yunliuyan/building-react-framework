@@ -32,9 +32,9 @@ Mock.mock('/api/login','post',function(options){
 });
 Mock.mock('api/check/token', 'post', function(options){
     if(options.body.token === '云流烟123123'){
-        return  {message: '验证成功',code: true}
+        return  {message: '验证成功',code: true,token:'云流烟123123'}
     }else{
-        return {message: '验证失败',code: false}
+        return {message: '验证失败',code: false,token:'云流烟123123'}
     }
 })
 module.exports = Mock;

@@ -47,11 +47,8 @@ class Login extends Component{
     componentDidUpdate=()=>{
         if(JSON.stringify(this.props.state.login) != '{}' ){
             if(this.props.state.login.code === 0){
-                this.setState({
-                    isLoading: false
-                })   
-                this.props.history.replace({pathname: '/',state: {isLogin: true}})
                 localStorage.setItem('token',this.props.state.login.token);
+                window.location.reload()
             }else if(this.props.state.login.code == 1){  
                 message.info('登录出错，请重试!')  
                 this.props.state.login = {loading:false}

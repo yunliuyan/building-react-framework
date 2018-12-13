@@ -34,15 +34,6 @@ const devConfig = {
                 loader: 'postcss-loader',
                 options: {
                     ident: 'postcss',
-                    // plugins: function () {
-                    //     return [
-                    //         postcssImport,
-                    //         postcssVars,
-                    //         autoprefixer({
-                    //             browsers: ['last 3 versions', 'Safari >= 8', 'iOS >= 8']
-                    //         })
-                    //     ];
-                    // }
                 }
             }]
         }],

@@ -1,0 +1,16 @@
+.topNav {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    background: #fff;
+    line-height: 50px;
+}
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.backLogin {
+    cursor: pointer;
+}
