@@ -96,11 +96,8 @@ Q：其登录页面并不需要导航栏，按照之前的逻辑所有的页面�
 A：碰到这个问题吐了一口老血。想了很多办法，比如在缓存池登录成功后加入一个字段isLogin，回到app.js里面来判断nav的显示隐藏，或者在页面加入一个字段来判断。
   但回到app.js组件中并不会重新刷新生命周期。componentDidUpdate又不能重新赋值等一系列问题。目前想到的解决方法是:将login的router单独写一个，然后显示：
   
-  
-  '<div> 
-        {this.state.isRouter ? <Redirect push to="/login" /> : ''}  
+   
          <div>{getLoginRouter()}</div>
          <div><Nav/>{getRouter()}</div> 
-   </div>'
   
    
