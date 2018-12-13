@@ -34,7 +34,11 @@ cnpm run build
 Q：如何在自己的react项目中引用antd
 
 A: .cnpm install antd --save
+
+
    . 需要引用插件babel-plugin-import，来引用antd的样式=》cnpm install babel-plugin-import --save
+   
+   
    .引用babel-plugin-import之后，需要修改webpack.common.config.js中的module：
    
    
