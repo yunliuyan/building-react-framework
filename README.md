@@ -1,13 +1,12 @@
 # building-react-framework
 借鉴网上资料，自己搭建了一个react+redux框架
 
-设计知识点: webpack+es6+react+redux+react-router+axios;
+设计知识点: webpack+es6+react+redux+react-router-dom+axios;
 
 开发环境如何使用(请安装淘宝镜像): 
 
 cnpm install
 
-cnpm run mock
 
 cnpm start
 
