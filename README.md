@@ -12,6 +12,10 @@ cnpm start
 
 都运行成功用浏览器访问路径：http://localhost:8000
 
+登录账号：云流烟
+
+登录密码：123123
+
 生产环境如何使用：
 
 cnpm run build
